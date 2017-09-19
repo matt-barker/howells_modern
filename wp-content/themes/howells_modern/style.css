@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: howells_modern
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags:  custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -48,6 +48,7 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	font-size: 18px;
 }
 
 body {
@@ -265,7 +266,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: "futura-pt", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -273,6 +274,11 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+}
+
+h1 {
+	font-size: 32px;
+	font-size: 2rem;
 }
 
 p {
@@ -483,15 +489,18 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #f49712;
+	transition: 300ms;
+	text-decoration: none;
 }
 
 a:visited {
-	color: purple;
+	color: #f49712;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #21759b;
+	transition: 300ms;
 }
 
 a:focus {

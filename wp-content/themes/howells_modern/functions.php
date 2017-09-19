@@ -59,12 +59,7 @@ if ( ! function_exists( 'howells_modern_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'howells_modern_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
+		
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -75,7 +70,7 @@ if ( ! function_exists( 'howells_modern_setup' ) ) :
 		 */
 		add_theme_support( 'custom-logo', array(
 			'height'      => 250,
-			'width'       => 250,
+			'width'       => 1000,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -117,6 +112,14 @@ add_action( 'widgets_init', 'howells_modern_widgets_init' );
  * Enqueue scripts and styles.
  */
 function howells_modern_scripts() {
+    //Enqueue Typekit fonts 
+  
+    wp_enqueue_script( 'howells-modern-typekit', 'https://use.typekit.net/lhg0rnq.js' );
+  
+    wp_enqueue_script( 'howells-modern-typekit-setup', get_template_directory_uri() . '/js/typekit.js', array(), true );
+      
+    wp_enqueue_script( 'howells-modern-typekit-script', '' );
+  
 	wp_enqueue_style( 'howells_modern-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'howells_modern-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -126,8 +129,11 @@ function howells_modern_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+  
+
 }
 add_action( 'wp_enqueue_scripts', 'howells_modern_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
