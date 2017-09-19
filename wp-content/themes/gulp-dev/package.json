@@ -1,21 +1,13 @@
 {
-  "name": "humescores",
+  "name": "howells_modern",
   "version": "0.0.1",
   "description": "Accessible WordPress theme utilizing flex layouts and modern development practices.",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mor10/humescores"
-  },
-  "author": "Morten Rand-Hendriksen",
+  "author": "Matt Barker",
   "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/mor10/humescores/issues"
-  },
-  "homepage": "https://github.com/mor10/humescores#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.2",
     "browser-sync": "^2.17.6",
