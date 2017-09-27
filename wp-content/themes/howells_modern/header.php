@@ -41,7 +41,7 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-
+      <div class="menu-wrapper">
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'howells_modern' ); ?></button>
 			<?php
@@ -51,6 +51,7 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+      </div><!-- #menu-wrapper -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

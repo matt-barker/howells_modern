@@ -69,10 +69,9 @@ if ( ! function_exists( 'howells_modern_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 1000,
-			'flex-width'  => true,
-			'flex-height' => true,
+			'height'      => 100,
+			'width'       => 520,
+			'flex-width'  => true
 		) );
 	}
 endif;
@@ -117,17 +116,24 @@ function howells_modern_scripts() {
     wp_enqueue_script( 'howells-modern-typekit', 'https://use.typekit.net/lhg0rnq.js' );
   
     wp_enqueue_script( 'howells-modern-typekit-setup', get_template_directory_uri() . '/js/typekit.js', array(), true );
+  
+    wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); 
       
     wp_enqueue_script( 'howells-modern-typekit-script', '' );
   
 	wp_enqueue_style( 'howells_modern-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'howells_modern-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'howells_modern-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 
 	wp_enqueue_script( 'howells_modern-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+  
+    wp_localize_script('howells_modern-navigation', 'howells_modernScreenReaderText', array(
+            'expand' => __( 'Expand child menu', 'howells_modern'),
+            'collapse' => __( 'Collapse child menu', 'howells_modern'),
+                ));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+		wp_enqueue_script( 'comment-reply');
 	}
   
 

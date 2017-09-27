@@ -1,0 +1,32 @@
+.site-header {
+  background-color: $color__howells-main;
+}
+
+.site-title a {
+  color:white;
+}
+
+.menu-wrapper {
+  background-color:#3c3c3b;
+
+}
+
+.site-logo-container {
+  width:525px;
+  height:100px;
+  background:url(img/howells_logo_sheet.png) 0 0;
+}
+
+#primary-menu a{
+  color:white;
+}
+
+#primary-menu li:hover{
+  background-color: #505050;
+}
+
+/*
+Header Menu
+*/
+
+@import "header-menu";
