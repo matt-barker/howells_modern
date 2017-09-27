@@ -1,7 +1,8 @@
 .site-branding,
 .main-navigation,
-.site-content,
-.site-footer {
+.site-info,
+.menu-footer-menu-container,
+.header-image-inner{
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -11,8 +12,8 @@
 }
 
 .site-content {
-  padding: 5em;
-  @media screen and (min-width:576px){
-    padding: 2em;
+  padding: 0;
+  @media screen and (min-width:$size__site-main){
+    padding: 0;
   }
 }

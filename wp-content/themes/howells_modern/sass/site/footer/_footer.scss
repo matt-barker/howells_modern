@@ -1,0 +1,33 @@
+#footer-menu {
+    flex-direction: row;
+    padding:0;
+    list-style: none;
+    margin: .4em 0;
+    background: #3c3c3b;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-basis: 25%;
+    flex-wrap: wrap;
+  }
+
+#footer-menu a {
+  margin:0 .4em;
+}
+
+.site-footer {
+    background: #3c3c3b;
+  }
+  
+  .legal-info {
+    color: white;
+    font-size: .75em;
+}
+
+@media screen and (min-width:$query__small){
+  
+    
+    
+    
+  }
+  

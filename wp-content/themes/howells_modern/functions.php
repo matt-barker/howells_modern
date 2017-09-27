@@ -45,6 +45,7 @@ if ( ! function_exists( 'howells_modern_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'howells_modern' ),
+            'menu-footer' => esc_html__( 'Footer', 'howells_modern' )
 		) );
 
 		/*

@@ -438,7 +438,7 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
-	background: #e6e6e6;
+	background: #0077AB;
 	color: rgba(0, 0, 0, 0.8);
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -637,8 +637,6 @@ a:hover, a:active {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-content:before,
-.site-content:after,
 .site-footer:before,
 .site-footer:after {
 	content: "";
@@ -662,8 +660,9 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site-branding,
 .main-navigation,
-.site-content,
-.site-footer {
+.site-info,
+.menu-footer-menu-container,
+.header-image-inner {
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -673,12 +672,12 @@ a:hover, a:active {
 }
 
 .site-content {
-	padding: 5em;
+	padding: 0;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
 	.site-content {
-		padding: 2em;
+		padding: 0;
 	}
 }
 
@@ -857,7 +856,7 @@ button.dropdown-toggle {
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
 	.main-navigation ul {
 		-webkit-box-pack: start;
 		    -ms-flex-pack: start;
@@ -893,6 +892,110 @@ button.dropdown-toggle {
 }
 
 /*--------------------------------------------------------------
+## Front page
+--------------------------------------------------------------*/
+.header-image {
+	position: relative;
+	background-image: url(img/sheffield_at_night_2000.jpg);
+	background-size: cover;
+	background-position: center top;
+}
+
+@media screen and (min-width: 576px) {
+	.header-image {
+		height: 30em;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.header-image {
+		height: 35em;
+	}
+}
+
+.header-image-overlay {
+	height: 100%;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (min-width: 576px) {
+	.header-image-overlay {
+		background: linear-gradient(to right, white 0%, white 12%, rgba(255, 255, 255, 0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+		/* IE6-9 */
+	}
+}
+
+.header-image-inner {
+	height: 25em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+@media screen and (min-width: 576px) {
+	.header-image-inner {
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		height: 100%;
+	}
+}
+
+.tagline-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding-left: 1em;
+}
+
+.tagline {
+	margin-top: 0;
+}
+
+.enquiry-button {
+	margin: 0 auto;
+	font-size: 1em;
+	border: 0px;
+	color: white;
+	line-height: 1.2em;
+}
+
+@media screen and (min-width: 576px) {
+	.enquiry-button {
+		margin: 0 auto 0 0;
+	}
+}
+
+.site-description-wrapper {
+	background: rgba(255, 255, 255, 0.75);
+	width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+	.site-description-wrapper {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.site-description-text {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+/*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 .comment-content a {
@@ -901,6 +1004,45 @@ button.dropdown-toggle {
 
 .bypostauthor {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+#footer-menu {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	padding: 0;
+	list-style: none;
+	margin: .4em 0;
+	background: #3c3c3b;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-line-pack: center;
+	    align-content: center;
+	-ms-flex-preferred-size: 25%;
+	    flex-basis: 25%;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+#footer-menu a {
+	margin: 0 .4em;
+}
+
+.site-footer {
+	background: #3c3c3b;
+}
+
+.legal-info {
+	color: white;
+	font-size: .75em;
 }
 
 /*--------------------------------------------------------------
