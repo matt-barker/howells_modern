@@ -59,6 +59,12 @@
     border-left: 1px solid white;
     margin-left: 5px;
     padding-left: 5px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+      @media screen and (min-width:$query__small){
+      
+      }
     }
   
     p {
@@ -88,8 +94,59 @@
   justify-content: center;
 }
 
-.contact-icon {
+.contact-icon-left {
+  display:none;
   color: $color__howells-complementary-2;
+  
+  @media screen and (min-width:$query__small){
+    display: block;
+    }
+}
+
+.contact-icon {
+  
+  @media screen and (min-width:$query__small){
+    display: none;
+    }
+}
+
+.header-contact-number {
+  color:#2d2d2d;
+  display: none;
+  @media screen and (min-width:$query__small){
+    display: block;
+    }
+}
+
+.contact-button {
+  //margin: 10px 0;
+  //display: block;
+  //color:white;
+  background: $color__howells-main;
+}
+
+
+
+.contact-modal{
+  
+  .vcard {
+  display: flex;
+  justify-content: space-between;
+    max-width: 400px;
+  }
+  
+  .modal-body {
+    font-size:1.2em;
+    .btn {
+      margin: 10px 0;
+      display: block;
+      color:white;
+      width:100%;
+    }
+  }
+  
+    
+  
 }
 
 

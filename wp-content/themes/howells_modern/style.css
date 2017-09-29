@@ -271,7 +271,7 @@ textarea {
 	line-height: 1.5;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	body,
 	button,
 	input,
@@ -439,7 +439,7 @@ input[type="submit"] {
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
 	background: #0077AB;
-	color: rgba(0, 0, 0, 0.8);
+	color: white;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1;
@@ -710,7 +710,7 @@ a:hover, a:active {
 	background-image: url(img/logo_mobile.png);
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	.header-logo {
 		background-image: url(img/logo_350.png);
 		width: 350px;
@@ -752,13 +752,23 @@ a:hover, a:active {
 	border-left: 1px solid white;
 	margin-left: 5px;
 	padding-left: 5px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .header-contact p {
 	margin: 2px 0;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	.header-contact {
 		font-size: .7em;
 	}
@@ -796,8 +806,57 @@ a:hover, a:active {
 	        justify-content: center;
 }
 
-.contact-icon {
+.contact-icon-left {
+	display: none;
 	color: #AB630E;
+}
+
+@media screen and (min-width: 640px) {
+	.contact-icon-left {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.contact-icon {
+		display: none;
+	}
+}
+
+.header-contact-number {
+	color: #2d2d2d;
+	display: none;
+}
+
+@media screen and (min-width: 640px) {
+	.header-contact-number {
+		display: block;
+	}
+}
+
+.contact-button {
+	background: #f89828;
+}
+
+.contact-modal .vcard {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	max-width: 400px;
+}
+
+.contact-modal .modal-body {
+	font-size: 1.2em;
+}
+
+.contact-modal .modal-body .btn {
+	margin: 10px 0;
+	display: block;
+	color: white;
+	width: 100%;
 }
 
 /*
@@ -819,7 +878,6 @@ Header Menu
 
 .main-navigation ul ul {
 	display: none;
-	top: 1.5em;
 	z-index: 99999;
 }
 
@@ -862,6 +920,31 @@ Header Menu
 	text-decoration: none;
 }
 
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	background: #f89828;
+	font-size: 1.2em;
+	padding: .4em .8em .2em .8em;
+}
+
+.main-navigation .current_page_item > a::after,
+.main-navigation .current-menu-item > a::after,
+.main-navigation .current_page_ancestor > a::after,
+.main-navigation .current-menu-ancestor > a::after {
+	content: "";
+	width: 100%;
+	height: 15px;
+	position: absolute;
+	left: 0;
+	bottom: -14px;
+	z-index: 1;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	background: #f89828;
+}
+
 .main-navigation .menu-item-has-children,
 .main-navigation .page-item-has-children {
 	min-width: 218px;
@@ -881,6 +964,10 @@ button.dropdown-toggle {
 	padding: .4em .6em;
 	height: 40px;
 	width: 40px;
+}
+
+button.dropdown-toggle::after {
+	display: none;
 }
 
 .menu-toggle {
@@ -903,7 +990,7 @@ button.dropdown-toggle {
 	display: block;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	.toggled-on ul,
 	.sub-menu.toggled-on,
 	.children.toggled-on {
@@ -916,7 +1003,6 @@ button.dropdown-toggle {
 	.main-navigation .menu-item-has-children > a,
 	.main-navigation .page_item_has_children > a {
 		padding-right: 2em;
-		background: rgba(255, 255, 255, 0.1);
 	}
 	.main-navigation ul {
 		display: block;
@@ -991,7 +1077,7 @@ button.dropdown-toggle {
 	background-position: center top;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	.header-image {
 		height: 30em;
 	}
@@ -1008,7 +1094,7 @@ button.dropdown-toggle {
 	background: rgba(255, 255, 255, 0.7);
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	.header-image-overlay {
 		background: linear-gradient(to right, white 0%, white 12%, rgba(255, 255, 255, 0) 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
@@ -1026,7 +1112,7 @@ button.dropdown-toggle {
 	        justify-content: center;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	.header-image-inner {
 		-webkit-box-pack: start;
 		    -ms-flex-pack: start;
@@ -1061,7 +1147,7 @@ button.dropdown-toggle {
 	line-height: 1.2em;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	.enquiry-button {
 		margin: 0 auto 0 0;
 	}
@@ -1072,7 +1158,7 @@ button.dropdown-toggle {
 	width: 100%;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 640px) {
 	.site-description-wrapper {
 		position: absolute;
 		bottom: 0;

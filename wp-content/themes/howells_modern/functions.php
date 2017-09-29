@@ -120,7 +120,7 @@ function howells_modern_scripts() {
   
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); 
       
-    wp_enqueue_script( 'howells-modern-typekit-script', '' );
+    wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css' );
   
 	wp_enqueue_style( 'howells_modern-style', get_stylesheet_uri() );
 

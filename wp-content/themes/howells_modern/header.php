@@ -21,7 +21,97 @@
 </head>
 
 <body <?php body_class(); ?>>
+ <!-- Modals -->
+<div id="sheffieldModal" class="modal fade" role="dialog">
+  <div class="modal-dialog contact-modal">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Howells in Sheffield</h4>
+      </div>
+      <div class="modal-body">     
+        <div class="vcard">
+          <div class="adr">
+            <div class="street-address">15-17 Bridge Street</div>
+            <div class="locality">Sheffield</div > 
+            <div class="postal-code">S3 8NL</div >
+            <div class="country-name">United Kingdom</div >
+          </div>
+          <div class="tel">
+             <div class="tel">Tel: 01142 496 666</div>
+             <div class="tel">Fax: <span class="fax">01142 799 746</span></div>
+          </div>
+        </div>
+        <a role="button" class="btn contact-button btn-lg" href="tel:01142496666">Call Us</a>
+        <button class="btn btn-default btn-lg">Make an Enquiry</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="rotherhamModal" class="modal fade" role="dialog">
+  <div class="modal-dialog contact-modal">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Howells in Rotherham</h4>
+      </div>
+      <div class="modal-body">     
+        <div class="vcard">
+          <div class="adr">
+            <div class="street-address">18-20 Ship Hill</div>
+            <div class="locality">Rotherham</div > 
+            <div class="postal-code">S60 2HG</div >
+            <div class="country-name">United Kingdom</div >
+          </div>
+          <div class="tel">
+             <div class="tel">Tel: 01709 364 000</div>
+             <div class="tel">Fax: <span class="fax">01142 799 746</span></div>
+          </div>
+        </div>
+        <a role="button" class="btn contact-button btn-lg" href="tel:01709364000">Call Us</a>
+        <button class="btn btn-default btn-lg">Make an Enquiry</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="barnsleyModal" class="modal fade" role="dialog">
+  <div class="modal-dialog contact-modal">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Howells in Barnsley</h4>
+      </div>
+      <div class="modal-body">     
+        <div class="vcard">
+          <div class="adr">
+            <div class="street-address">21 Regent Street</div>
+            <div class="locality">Barnsley</div > 
+            <div class="postal-code">S70 2EG</div >
+            <div class="country-name">United Kingdom</div >
+          </div>
+          <div class="tel">
+             <div class="tel">Tel: 01226 805 190</div>
+             <div class="tel">Fax: <span class="fax">01142 799 746</span></div>
+          </div>
+        </div>
+        <a role="button" class="btn contact-button btn-lg" href="tel:01226805190">Call Us</a>
+        <button class="btn btn-default btn-lg">Make an Enquiry</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
 <div id="page" class="site">
+  
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'howells_modern' ); ?></a>
 
 	<header id="masthead" class="site-header">
@@ -49,18 +139,21 @@
         <div class="header-contact-wrapper">
           
           <div class="header-contact">
-            <i class="fa fa-phone fa-2x contact-icon" aria-hidden="true"></i>
             
-            <a href="tel:01142496666" class="header-contact-link">
+            
+            <a href="#" data-toggle="modal" data-target="#sheffieldModal" class="header-contact-link">
               <p class="header-contact-office">Sheffield</p>
+              <i class="fa fa-phone-square fa-2x contact-icon"></i>
               <p class="header-contact-number">01142 496 666</p>
             </a>
-            <a href="tel:01709364000" class="header-contact-link">
+            <a href="#" data-toggle="modal" data-target="#rotherhamModal" class="header-contact-link">
               <p class="header-contact-office">Rotherham</p>
+              <i class="fa fa-phone-square fa-2x contact-icon"></i>
               <p class="header-contact-number">01709 364 000</p>
             </a>
-            <a href="tel:01226805190" class="header-contact-link">
+            <a href="#" data-toggle="modal" data-target="#barnsleyModal" class="header-contact-link">
               <p class="header-contact-office">Barnsley</p>
+              <i class="fa fa-phone-square fa-2x contact-icon"></i>
               <p class="header-contact-number">01226 805 190</p>
             </a>
             
