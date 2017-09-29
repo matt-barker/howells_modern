@@ -658,17 +658,13 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global Layouts
 --------------------------------------------------------------*/
-.site-branding,
+.header-top-wrapper,
 .main-navigation,
 .site-info,
 .menu-footer-menu-container,
 .header-image-inner {
 	max-width: 1200px;
 	margin: 0 auto;
-}
-
-.site-branding {
-	padding-top: 8px;
 }
 
 .site-content {
@@ -696,18 +692,112 @@ a:hover, a:active {
 	background-color: #3c3c3b;
 }
 
-.site-logo-container {
-	width: 525px;
-	height: 100px;
-	background: url(img/howells_logo_sheet.png) 0 0;
-}
-
 #primary-menu a {
 	color: white;
 }
 
 #primary-menu li:hover {
 	background-color: #505050;
+}
+
+.logo-link {
+	display: inline-block;
+}
+
+.header-logo {
+	width: 99px;
+	height: 75px;
+	background-image: url(img/logo_mobile.png);
+}
+
+@media screen and (min-width: 576px) {
+	.header-logo {
+		background-image: url(img/logo_350.png);
+		width: 350px;
+		height: 65px;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.header-logo {
+		background-image: url(img/logo_535.png);
+		width: 535px;
+		height: 100px;
+	}
+}
+
+.header-top-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 10px;
+}
+
+.header-contact {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 1em;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.header-contact a {
+	color: white;
+	border-left: 1px solid white;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+.header-contact p {
+	margin: 2px 0;
+}
+
+@media screen and (min-width: 576px) {
+	.header-contact {
+		font-size: .7em;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.header-contact {
+		font-size: .9em;
+	}
+}
+
+.header-contact-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.site-branding {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.contact-icon {
+	color: #AB630E;
 }
 
 /*

@@ -25,9 +25,14 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'howells_modern' ); ?></a>
 
 	<header id="masthead" class="site-header">
+      <div class="header-top-wrapper">
 		<div class="site-branding">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-link">
+            <div class="header-logo"></div>
+          </a>
 			<?php
-			the_custom_logo();
+			
+          
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
@@ -41,6 +46,27 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
+        <div class="header-contact-wrapper">
+          
+          <div class="header-contact">
+            <i class="fa fa-phone fa-2x contact-icon" aria-hidden="true"></i>
+            
+            <a href="tel:01142496666" class="header-contact-link">
+              <p class="header-contact-office">Sheffield</p>
+              <p class="header-contact-number">01142 496 666</p>
+            </a>
+            <a href="tel:01709364000" class="header-contact-link">
+              <p class="header-contact-office">Rotherham</p>
+              <p class="header-contact-number">01709 364 000</p>
+            </a>
+            <a href="tel:01226805190" class="header-contact-link">
+              <p class="header-contact-office">Barnsley</p>
+              <p class="header-contact-number">01226 805 190</p>
+            </a>
+            
+          </div><!-- .header-contact -->
+        </div><!-- .header-contact-wrapper -->
+      </div><!-- .header-top-wrapper -->
       <div class="menu-wrapper">
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'howells_modern' ); ?></button>
